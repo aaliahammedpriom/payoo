@@ -1,8 +1,8 @@
 // confirm button event
-document.getElementById('confirm-js').addEventListener('click',function(event){
-    event.preventDefault();
-    alert('Please Select What You Want !')
-})
+// document.getElementById('confirm-js').addEventListener('click',function(event){
+//     event.preventDefault();
+//     alert('Please Select What You Want !')
+// })
 
 // add money event
 document.getElementById('add-money-js').addEventListener('click', function(event){
