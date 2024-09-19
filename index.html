@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class=" flex justify-center">
+        <div class="mockup-phone">
+          <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3">
+                <!-- login section -->
+                <div class="hero bg-base-200 min-h-screen">
+                  <div class="hero-content flex-col ">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">Phone Number</span>
+                          </label>
+                          <input id="number-js" type="number" placeholder="Your Phone Number" class="input input-bordered" autocomplete="off" />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text">PIN</span>
+                          </label>
+                          <input id="pin-js" type="password" placeholder="Enter Your PIN" class="input input-bordered" required />
+                          <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                          </label>
+                        </div>
+                        <div id="login-js" class="form-control mt-6">
+                          <button class="btn btn-primary">Login</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </main>
+    <script>
+      // get login button
+      document.getElementById("login-js").addEventListener('click',function(){
+        // console.log('Button Clicked');
+        // preventing from reloding
+        event.preventDefault();
+        const phoneNumber = document.getElementById('number-js');
+        const pinNumber =document.getElementById('pin-js').value;
+        // console.log(phoneNumber.value);
+        // console.log(phoneNumber);
+        if(phoneNumber.value.length == 5 && phoneNumber.value == 1607 && pinNumber == 1234 ){
+          console.log(true);
+          window.alert(' Correct ! Press Ok for Dashboard')
+          window.location.href ="home.html";
+        }
+        else{
+          console.log(false);
+          window.alert(' Wrong Pin. Pleaase Try Again !')
+        }
+
+      })
+    </script>
+    <script src="js/login-script.js"></script>
+  </body>
+</html>
