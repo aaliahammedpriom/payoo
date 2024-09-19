@@ -43,8 +43,6 @@ document.getElementById('cash-out-money-js').addEventListener('click', function(
         document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('blance-js').innerHTML) - parseFloat(document.getElementById('amount-js').value);
         // cash out confirmation alert
         alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully cash out to: +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
-        
-  window.location.href ="index.html";
     }
     else{
         alert("Wrong PIN !");
