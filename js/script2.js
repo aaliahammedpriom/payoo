@@ -22,7 +22,7 @@ document.getElementById('add-money-js').addEventListener('click', function(event
         alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully added from : +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
     }
     else{
-        console.log('false');
+        alert("Wrong PIN !");
     }
 })
     
@@ -47,7 +47,7 @@ document.getElementById('cash-out-money-js').addEventListener('click', function(
   window.location.href ="index.html";
     }
     else{
-        console.log('false');
+        alert("Wrong PIN !");
     }
 })
     
