@@ -12,13 +12,13 @@
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-3">
+              <div class="artboard artboard-demo phone-2">
 
                 <!-- blance show -->
                 <div class="stats shadow">
                     <div class="stat">
-                      <div class="stat-title">Total Blance</div>
-                      <div class="stat-value">89,400</div>
+                      <div class="stat-title">Tk.</div>
+                      <div id="blance-js" class="stat-value">89400</div>
                       <div class="stat-desc">Avaiable Blance</div>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
 
                 <!-- add money & cash out button -->
                  <div class="flex justify-center my-0">
-                    <button class="btn btn-success mr-5">Add Money</button>
-                    <button class="btn btn-error ml-5">Cash Out</button>
+                    <button id="add-money-js" class="btn btn-success mr-5">Add Money</button>
+                    <button id="cash-out-money-js" class="btn btn-error ml-5">Cash Out</button>
                  </div>
 
                  <!-- devider -->
@@ -45,15 +45,15 @@
                         <label class="label">
                           <span class="label-text">Amount</span>
                         </label>
-                        <input type="number" placeholder="enter amount" class="input input-bordered" required />
+                        <input id="amount-js" type="number" placeholder="enter amount" class="input input-bordered" required />
                       </div>
 
-                      <!-- Receiver Number -->
+                      <!-- Number -->
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Receiver Number</span>
+                          <span class="label-text">Number</span>
                         </label>
-                        <input type="number" placeholder="enter number" class="input input-bordered" required />
+                        <input id="number-js" type="number" placeholder="enter number" class="input input-bordered" required />
                       </div>
 
                       <!-- PIN -->
@@ -61,11 +61,12 @@
                         <label class="label">
                           <span class="label-text">PIN</span>
                         </label>
-                        <input type="password" placeholder="enter your pin" class="input input-bordered" required />
+                        <input id="pin-js" type="password" placeholder="enter your pin" class="input input-bordered" required />
                       </div>
 
+                      <!-- confirm button -->
                       <div class="form-control mt-6">
-                        <button class="btn btn-primary">Add Money</button>
+                        <button id="confirm-js" class="btn btn-primary">Confirm</button>
                       </div>
                     </form>
                   </div>
@@ -74,5 +75,61 @@
             </div>
           </div>
     </main>
+    <script src="js/script2.js"></script>
+    <!-- <script >
+        // confirm button event
+        document.getElementById('confirm-js').addEventListener('click',function(event){
+            event.preventDefault();
+            alert('Please Select What You Want !')
+        })
+        // add money event
+document.getElementById('add-money-js').addEventListener('click', function(event){
+    // change button name
+    document.getElementById('confirm-js').innerHTML = 'Confirm Add Money'
+
+    // Confirm Add Money event
+    document.getElementById('confirm-js').addEventListener('click',function(event){
+
+    // event preventing
+    event.preventDefault();
+
+    if(document.getElementById('pin-js').value == 1234){
+        // update blance event
+        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('amount-js').value) + parseFloat(document.getElementById('blance-js').innerHTML);
+        // cash confirmation alert
+        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully added from : +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
+    }
+    else{
+        console.log('false');
+    }
+})
+    
+})
+
+
+// cash out event
+document.getElementById('cash-out-money-js').addEventListener('click', function(event){
+    // change button name
+    document.getElementById('confirm-js').innerHTML = 'Confirm Cash Out'
+
+    // confirm cash out event
+    document.getElementById('confirm-js').addEventListener('click',function(event){
+    // event preventing
+    event.preventDefault();
+    if(document.getElementById('pin-js').value == 1234){
+        // update blance event
+        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('blance-js').innerHTML) - parseFloat(document.getElementById('amount-js').value);
+        // cash out confirmation alert
+        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully cash out to: +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
+        
+  window.location.href ="index.html";
+    }
+    else{
+        console.log('false');
+    }
+})
+    
+})
+    </script> -->
 </body>
 </html>
