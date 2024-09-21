@@ -37,15 +37,18 @@
                 <div class="divider divider-neutral my-1 "></div>
 
                  <!-- add money form -->
-                 <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                 <div id="add-money-form-js" class="hidden card bg-base-100 w-full shrink-0 shadow-2xl">
                     <form class="card-body">
-                        
+                        <!-- add money show -->
+                        <div class="flex justify-center font-extrabold">
+                          <h3>Add Money</h3>
+                         </div>
                         <!-- Amount -->
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Amount</span>
                         </label>
-                        <input id="amount-js" type="number" placeholder="enter amount" class="input input-bordered" required />
+                        <input id="add-money-amount-js" type="number" placeholder="enter amount" class="input input-bordered" required />
                       </div>
 
                       <!-- Number -->
@@ -61,75 +64,61 @@
                         <label class="label">
                           <span class="label-text">PIN</span>
                         </label>
-                        <input id="pin-js" type="password" placeholder="enter your pin" class="input input-bordered" required />
+                        <input id="add-money-pin-js" type="password" placeholder="enter your pin" class="input input-bordered" required />
                       </div>
 
                       <!-- confirm button -->
                       <div class="form-control mt-6">
-                        <button id="confirm-js" class="btn btn-primary">Confirm</button>
+                        <button id="add-money-confirm-js" class="btn btn-primary">Confirm</button>
                       </div>
                     </form>
                   </div>
+
+                  <!-- cash out form -->
+                 <div id="cash-out-form-js" class="hidden card bg-base-100 w-full shrink-0 shadow-2xl">
+                  <form class="card-body">
+                      
+                    <!-- cash out show -->
+                    <div class="flex justify-center font-extrabold">
+                      <h3>Cash Out</h3>
+                     </div>
+
+                      <!-- Amount -->
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Amount</span>
+                      </label>
+                      <input id="cash-out-amount-js" type="number" placeholder="enter amount" class="input input-bordered" required />
+                    </div>
+
+                    <!-- Number -->
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Number</span>
+                      </label>
+                      <input id="cash-out-number-js" type="number" placeholder="enter number" class="input input-bordered" required />
+                    </div>
+
+                    <!-- PIN -->
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">PIN</span>
+                      </label>
+                      <input id="cash-out-pin-js" type="password" placeholder="enter your pin" class="input input-bordered" required />
+                    </div>
+
+                    <!-- confirm button -->
+                    <div class="form-control mt-6">
+                      <button id="cash-out-confirm-js" class="btn btn-primary">Confirm</button>
+                    </div>
+                  </form>
+                </div>
 
 
             </div>
           </div>
     </main>
     <script src="js/script2.js"></script>
-    <!-- <script >
-        // confirm button event
-        document.getElementById('confirm-js').addEventListener('click',function(event){
-            event.preventDefault();
-            alert('Please Select What You Want !')
-        })
-        // add money event
-document.getElementById('add-money-js').addEventListener('click', function(event){
-    // change button name
-    document.getElementById('confirm-js').innerHTML = 'Confirm Add Money'
 
-    // Confirm Add Money event
-    document.getElementById('confirm-js').addEventListener('click',function(event){
-
-    // event preventing
-    event.preventDefault();
-
-    if(document.getElementById('pin-js').value == 1234){
-        // update blance event
-        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('amount-js').value) + parseFloat(document.getElementById('blance-js').innerHTML);
-        // cash confirmation alert
-        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully added from : +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
-    }
-    else{
-        console.log('false');
-    }
-})
-    
-})
-
-
-// cash out event
-document.getElementById('cash-out-money-js').addEventListener('click', function(event){
-    // change button name
-    document.getElementById('confirm-js').innerHTML = 'Confirm Cash Out'
-
-    // confirm cash out event
-    document.getElementById('confirm-js').addEventListener('click',function(event){
-    // event preventing
-    event.preventDefault();
-    if(document.getElementById('pin-js').value == 1234){
-        // update blance event
-        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('blance-js').innerHTML) - parseFloat(document.getElementById('amount-js').value);
-        // cash out confirmation alert
-        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully cash out to: +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
-        
-  window.location.href ="index.html";
-    }
-    else{
-        console.log('false');
-    }
-})
-    
-})
-    </script> -->
 </body>
 </html>

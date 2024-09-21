@@ -6,24 +6,25 @@
 
 // add money event
 document.getElementById('add-money-js').addEventListener('click', function(event){
-    // change button name
-    document.getElementById('confirm-js').innerHTML = 'Confirm Add Money'
+    // 
+    document.getElementById('add-money-form-js').style.display = "block";
+    document.getElementById('cash-out-form-js').style.display = "";
 
     // Confirm Add Money event
-    document.getElementById('confirm-js').addEventListener('click',function(event){
+    document.getElementById('add-money-confirm-js').addEventListener('click',function(event){
 
     // event preventing
     event.preventDefault();
 
-    if(document.getElementById('pin-js').value == 1234){
+    if(document.getElementById('add-money-pin-js').value == 1234){
         // update blance event
-        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('amount-js').value) + parseFloat(document.getElementById('blance-js').innerHTML);
-        // cash confirmation alert
-        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully added from : +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
+        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('add-money-amount-js').value) + parseFloat(document.getElementById('blance-js').innerHTML); 
+        
     }
     else{
         alert("Wrong PIN !");
     }
+    
 })
     
 })
@@ -31,18 +32,18 @@ document.getElementById('add-money-js').addEventListener('click', function(event
 
 // cash out event
 document.getElementById('cash-out-money-js').addEventListener('click', function(event){
-    // change button name
-    document.getElementById('confirm-js').innerHTML = 'Confirm Cash Out'
-
+    
+    document.getElementById('cash-out-form-js').style.display = "block";
+    document.getElementById('add-money-form-js').style.display = "";
     // confirm cash out event
-    document.getElementById('confirm-js').addEventListener('click',function(event){
+    document.getElementById('cash-out-confirm-js').addEventListener('click',function(event){
     // event preventing
     event.preventDefault();
-    if(document.getElementById('pin-js').value == 1234){
+    if(document.getElementById('cash-out-pin-js').value == 1234){
         // update blance event
-        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('blance-js').innerHTML) - parseFloat(document.getElementById('amount-js').value);
-        // cash out confirmation alert
-        alert("Bdt " + parseFloat(document.getElementById('amount-js').value) + " tk successfully cash out to: +88" + document.getElementById('number-js').value + ", \nYour new Blance : " + document.getElementById('blance-js').innerHTML + "tk." )
+        document.getElementById('blance-js').innerHTML = parseFloat(document.getElementById('blance-js').innerHTML) - parseFloat(document.getElementById('cash-out-amount-js').value);
+     
+        
     }
     else{
         alert("Wrong PIN !");
