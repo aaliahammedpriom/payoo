@@ -6,6 +6,7 @@
     <title>Payoo Home</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body>
     <main class=" flex justify-center">
@@ -27,10 +28,11 @@
                 <div class="divider divider-neutral my-1 "></div>
                 
 
-                <!-- add money & cash out button -->
+                <!-- add money cash out & transction history button -->
                  <div class="flex justify-center my-0">
-                    <button id="add-money-js" class="btn btn-success mr-5">Add Money</button>
-                    <button id="cash-out-money-js" class="btn btn-error ml-5">Cash Out</button>
+                    <button id="add-money-js" class="btn btn-success py-0">Add Money</button>
+                    <button id="cash-out-money-js" class="btn btn-error py-0 mx-1">Cash Out</button>
+                    <button id="transaction-history-js" class="btn btn-info py-0">Transaction History</button>
                  </div>
 
                  <!-- devider -->
@@ -114,11 +116,20 @@
                   </form>
                 </div>
 
+                <!-- transaction history -->
+                <div class="hidden flex justify-center  font-extrabold">
+                  <h3>Transaction History</h3>
+                 </div>
+                 <div id="transaction-section-js" >
+
+                 </div>
+                
+
+
 
             </div>
           </div>
     </main>
     <script src="js/script2.js"></script>
-
 </body>
 </html>
