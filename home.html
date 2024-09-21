@@ -13,15 +13,17 @@
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-2">
+              <div class="artboard artboard-demo phone-3">
 
                 <!-- blance show -->
-                <div class="stats shadow">
+                <div class="flex justify-center">
+                  <div class="stats shadow">
                     <div class="stat">
-                      <div class="stat-title">Tk.</div>
                       <div id="blance-js" class="stat-value">89400</div>
                       <div class="stat-desc">Avaiable Blance</div>
                     </div>
+                </div>
+                
                 </div>
 
                 <!-- devider -->
@@ -40,7 +42,7 @@
 
                  <!-- add money form -->
                  <div id="add-money-form-js" class="hidden card bg-base-100 w-full shrink-0 shadow-2xl">
-                    <form class="card-body">
+                    <form class="card-body py-2">
                         <!-- add money show -->
                         <div class="flex justify-center font-extrabold">
                           <h3>Add Money</h3>
@@ -78,7 +80,7 @@
 
                   <!-- cash out form -->
                  <div id="cash-out-form-js" class="hidden card bg-base-100 w-full shrink-0 shadow-2xl">
-                  <form class="card-body">
+                  <form class="card-body py-2">
                       
                     <!-- cash out show -->
                     <div class="flex justify-center font-extrabold">
@@ -117,16 +119,17 @@
                 </div>
 
                 <!-- transaction history -->
-                <div class="hidden flex justify-center  font-extrabold">
-                  <h3>Transaction History</h3>
+                <div id="transaction-section-js" class="hidden flex justify-center  ">
+                  <h3 class="font-extrabold flex justify-center">Transaction History</h3>
+                  <p class="flex justify-center"></p>
+                  
                  </div>
-                 <div id="transaction-section-js" >
 
-                 </div>
-                
-
-
-
+                 <!-- log out -->
+                <div class="p-2">
+                  <button id="log-out-js" class="btn glass">Log Out</button>
+                </div>
+                 
             </div>
           </div>
     </main>
